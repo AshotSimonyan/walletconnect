@@ -1,0 +1,366 @@
+/*reset*/
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video, button {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+article, aside, details, figcaption, figure, dialog,
+footer, header, hgroup, menu, nav, section, main {
+    display: block;
+}
+
+ul, ul li {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+
+    &:before, &:after {
+        content: none;
+    }
+}
+
+a {
+    text-decoration: none;
+    font-size: 100%;
+    color: inherit;
+}
+
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/**
+ * Paul Irish box sizing reset so all elements have broder-box.
+ */
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+    font-family: inherit;
+}
+
+/**
+ * custom smarty resets
+ */
+a {
+    text-decoration: none;
+}
+
+button, input, a, textarea {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input {
+    &:-webkit-autofill, &:-webkit-autofill:hover, &:-webkit-autofill:focus, &:-webkit-autofill:active {
+        -webkit-box-shadow: 0 0 0 30px #fff inset !important;
+    }
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+iframe {
+    pointer-events: none;
+}
+
+
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 16px;
+    color: #7C8998;
+    line-height: 1.5;
+}
+
+.container {
+    max-width: 1140px;
+    width: 100%;
+    padding: 0 16px;
+    margin: 0 auto;
+}
+
+
+.app {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: #01102F url("assets/bg.png") no-repeat right top;
+    background-size: 85%;
+}
+
+
+.header {
+    padding: 32px 0;
+    .logo {
+        max-width: 126px;
+        width: 100%;
+        display: inline-block;
+
+        img {
+            width: 100%;
+        }
+    }
+}
+
+main {
+    flex: 1;
+    padding: 40px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .content {
+        max-width: 738px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    h1 {
+        font-size: 64px;
+        line-height: 1;
+        font-family: 'Rajdhani', sans-serif;
+        color: #fff;
+        margin-bottom: 8px;
+        font-weight: 700;
+    }
+}
+
+.text {
+    margin-bottom: 40px;
+}
+.pink-text {
+    color: #DA1FA2;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    font-weight: 500;
+}
+.footer {
+    padding: 32px 0;
+    background: #01102F linear-gradient(180deg, #18183D 0%, rgba(10, 24, 54, 0) 100%);
+
+
+
+    .logo {
+        max-width: 69px;
+        width: 100%;
+        display: inline-block;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .left {
+        display: flex;
+        align-items: center;
+
+        .copyright {
+            margin-left: 40px;
+        }
+    }
+    .content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .social {
+        display: flex;
+        li {
+            &:not(:last-child) {
+                margin-right: 16px;
+            }
+        }
+    }
+}
+.btn {
+    cursor: pointer;
+    display: inline-flex;
+    height: 48px;
+    line-height: 48px;
+    padding: 0 32px;
+    border-radius: 4px;
+    background-color: #DA1FA2;
+    color: #ffffff;
+    font-weight: 400;
+    font-size: 14px;
+    transition: .3s;
+
+    &:hover {
+        background-color: darken(#DA1FA2, 10%);
+    }
+}
+
+.mint-content {
+    display: inline-flex;
+    align-items: center;
+    color: #000;
+}
+
+.mint-input {
+    line-height: 48px;
+    background-color: #ffffff;
+    border-radius: 4px;
+    width: 140px;
+    margin-right: 16px;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-around;
+
+    button {
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        font-size: 32px;
+    }
+}
+
+
+.btn-mint {
+    background-color: #DA1FA2;
+    color: #ffffff;
+    height: 48px;
+    line-height: 48px;
+    padding: 0 32px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: .3s;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+
+    &:not([disabled]) {
+        &:hover {
+            background-color: darken(#DA1FA2, 10%);
+        }
+    }
+
+    &[disabled] {
+        pointer-events: none;
+        background-color: rgba(218, 31, 162, 0.5);
+    }
+}
+
+.warn-text {
+    padding: 24px 0;
+    font-size: 16px;
+    color: red;
+}
+
+.lds-ring {
+    display: inline-block;
+    position: relative;
+    width: 20px;
+    height: 20px;
+    margin-left: 24px;
+}
+
+.lds-ring div {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 3px solid #ffffff;
+    border-radius: 50%;
+    animation: ldsRing 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    border-color: #ffffff transparent transparent transparent;
+}
+
+.lds-ring div:nth-child(1) {
+    animation-delay: -0.45s;
+}
+
+.lds-ring div:nth-child(2) {
+    animation-delay: -0.3s;
+}
+
+.lds-ring div:nth-child(3) {
+    animation-delay: -0.15s;
+}
+
+@media (min-width: 992px) and (max-height: 800px) {
+
+    .app {
+        background: #01102F url("assets/bg-md.png") no-repeat right top;
+        background-size: 70%;
+    }
+}
+
+@media (max-width: 1199px) {
+    main {
+        h1 {
+            font-size: 42px;
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .app {
+        background-size: 150%;
+    }
+    main {
+        h1 {
+            font-size: 32px;
+        }
+    }
+    .footer {
+        padding: 16px 0;
+
+        .content {
+            flex-direction: column;
+
+            .left {
+                margin-bottom: 12px;
+            }
+
+            .copyright {
+                text-align: left;
+                margin-left: 16px;
+            }
+        }
+    }
+}
+
+@keyframes ldsRing {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
